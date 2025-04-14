@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=UnifrakturMaguntia&display=swap');
+:root{
+    --fonte-primaria: "Sour Gummy"
+   --fonte-secundaria:"UnifrakturMaguntia"
+--preto: #0a0908ff;
+--metalico: #22333bff;
+--brano-esfumacado: #f2f4f3ff;
+--castor: #a9927dff;
+--marrom-nozes: #5e503fff;
+--preto:#000000;
+--branco: #f1f1f1;
+}
+
+body{
+    background-color: var(--metalico);
+    color: var(--brano-esfumacado);
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.conteudo-principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.titulo-principal{
+    font-family: var(--fonte-secundaria);
+    text-align: left;
+    width: 100%;
+    font-size: 36px;
+}
+
+.botao{
+    font-family: var(--fonte-primaria);
+    background-color: var(--castor);
+    color: var(--marrom-nozes);
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-size: 18px;
+    align-items: center;
+    width: 100%;
+    border-bottom: 4px solid var(--marrom-nozes);
+    border-left: 4px solid var(--marrom-nozes);
+    border-right:solid var(--marrom-nozes);
+    border-top: none;
+}
+.botoes{
+    display: block;
+}
+
+.botao:first-child{
+    border-radius: 40px 40px 0 0;
+}
+
+.botao:last-child{
+    border-radius: 0 0 40px 40px;
+
+}
+
+.ativo{
+    background-color: var(--preto);
+    border-bottom: var(--brano-esfumacado);
+}
+
+.abas-textos{
+    background-color: var(--marrom-nozes);
+    padding: 40px;
+    border-radius: 0 0 40px 40px;
+}
+
+.aba-conteudo.ativo{
+    display: block;
+}
+
+.aba-conteudo.ativo{
+display: none;
+}
+
+.aba-conteudo-titulo-principal{
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.aba-conteudo-titulo-secundario{
+    text-align: center;
+    color: var(--brano-esfumacado)
+}
+
+
+@media screen and (min-width:768px){
+   .botoes{
+    display: flex;
+   } 
+   .botao:first-child{
+    border-radius: 40px 0 0 0;
+   }
+   .botao:last-child{
+    border-radius: 0 40px 0 0;
+   }
+}
