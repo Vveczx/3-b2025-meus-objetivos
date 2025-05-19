@@ -26,7 +26,11 @@ for (let i = 0; i < botoes.length; i++) {
     }
 function atualizaCronometro(){
     for (let i=0; i<contadores.lenght;i++){
-        contadores[i].textContent = calculatempo(tempos[i])
+       document.getElementById("dias"+i).textContent = calculatempo(tempos[1][0]);
+       document.getElementById("horas"+i).textContent = calculatempo(tempos [1][1]);
+       document.getElementById("min"+i).textContent= calculatempo(tempos[1][2]);
+       document.getElementById("seg"+i).textContent= calculatempo(tempo[1][3]);
+
     }
 }
 }
@@ -51,5 +55,7 @@ if(tempoFinal > 0){
     return "objetivo concluido"
 }
 }
+
+
 
 
